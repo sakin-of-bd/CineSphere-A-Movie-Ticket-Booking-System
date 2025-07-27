@@ -1,6 +1,7 @@
 # CineSphere-A-Movie-Ticket-Booking-System (Version 1.0)
 
 ##Intro:
+
 The “CineSphere: A Movie Ticket Booking System” is a user-friendly and efficient
 Java-based application developed to streamline the movie ticket booking process. In
 today’s fast-paced world, traditional methods of purchasing movie tickets are

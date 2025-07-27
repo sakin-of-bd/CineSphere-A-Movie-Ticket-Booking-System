@@ -1,0 +1,15 @@
+#splashText {
+    -fx-font-size: 28px;
+    -fx-font-family: "Georgia";
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+#loadingText {
+    -fx-font-family: "Roboto";
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-fill: yellow;
+}
+
+

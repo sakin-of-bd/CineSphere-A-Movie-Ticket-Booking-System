@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.all_files.Admin_Dashboard_Controller">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="29.0" prefWidth="1000.0" style="-fx-background-color: orange; -fx-border-color: #000; -fx-border-width: .2px .2px .2px .2px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="64.0" layoutY="4.0" text="CineSphere">
+                           <font>
+                              <Font name="Microsoft Sans Serif" size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="38.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Ticket.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="19.0" fitWidth="20.0" layoutX="140.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Ticket.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="323.0" prefWidth="199.0" style="-fx-background-color: #c42528;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="118.0" fitWidth="105.0" layoutX="48.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="18.0" layoutY="143.0" text="✨ WELC0ME ADMIN ✨" textFill="#b1e30b">
+                     <font>
+                        <Font name="Rockwell Extra Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="dashboard_btn" layoutX="7.0" layoutY="218.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="185.0" style="-fx-background-radius: 20;" text="Dashboard" textFill="#1b00eb">
+                     <font>
+                        <Font name="Perpetua" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="addMovies_btn" layoutX="7.0" layoutY="273.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="185.0" style="-fx-background-radius: 20;" text="Add Movies" textFill="#1b00eb">
+                     <font>
+                        <Font name="Perpetua" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="availableMovies_btn" layoutX="6.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="185.0" style="-fx-background-radius: 20;" text="   Available Movies" textFill="#1b00eb">
+                     <font>
+                        <Font name="Perpetua" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="editScreening_btn" layoutX="6.0" layoutY="383.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="185.0" style="-fx-background-radius: 20;" text="    Manage Screening" textFill="#1b00eb">
+                     <font>
+                        <Font name="Perpetua" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="customers_btn" layoutX="6.0" layoutY="440.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="25.0" prefWidth="185.0" style="-fx-background-radius: 20;" text="Customers" textFill="#1b00eb">
+                     <font>
+                        <Font name="Perpetua" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="signout" layoutX="22.0" layoutY="524.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="111.0" style="-fx-background-radius: 10; -fx-background-color: orange;" text="     Sign Out" />
+                  <ImageView fitHeight="23.0" fitWidth="24.0" layoutX="32.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/logout.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="46.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/dashboard.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="40.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/add_movies.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="30.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/available_movies.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="29.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Edit_Screening.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" layoutX="39.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Customers.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="dashboard_form" layoutX="155.0" layoutY="186.0" prefHeight="571.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="774.0" style="-fx-background-color: pink; -fx-background-radius: 8;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane layoutX="24.0" layoutY="19.0" prefHeight="162.0" prefWidth="231.0" style="-fx-background-radius: 10; -fx-background-color: #c9340e;">
+                                 <children>
+                                    <AnchorPane prefHeight="162.0" prefWidth="96.0" style="-fx-background-color: #c9590e; -fx-background-radius: 10;">
+                                       <children>
+                                          <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="8.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/money.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="108.0" layoutY="129.0" text="Total Sold Ticket" textFill="#f2eeee">
+                                       <font>
+                                          <Font name="Georgia" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashboard_totalSoldTicket" layoutX="166.0" layoutY="14.0" prefHeight="32.0" prefWidth="58.0" text="1500" textFill="#f5eeee">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="269.0" layoutY="19.0" prefHeight="162.0" prefWidth="239.0" style="-fx-background-radius: 10; -fx-background-color: #c90e30;">
+                                 <children>
+                                    <AnchorPane layoutX="-2.0" prefHeight="162.0" prefWidth="96.0" style="-fx-background-color: #b60ec9; -fx-background-radius: 10;">
+                                       <children>
+                                          <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="9.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/ticketttt.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="112.0" layoutY="130.0" text="Total Earn Today" textFill="#f2eeee">
+                                       <font>
+                                          <Font name="Georgia" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashboard_totalEarnToday" layoutX="117.0" layoutY="15.0" prefHeight="32.0" prefWidth="119.0" text="1500" textFill="#f5eeee">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="520.0" layoutY="19.0" prefHeight="162.0" prefWidth="233.0" style="-fx-background-color: #0e34c9; -fx-background-radius: 10;">
+                                 <children>
+                                    <AnchorPane layoutX="-1.0" prefHeight="162.0" prefWidth="96.0" style="-fx-background-color: #0ea7c9; -fx-background-radius: 10;">
+                                       <children>
+                                          <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="10.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Images/availble.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="106.0" layoutY="130.0" text="Available Movies" textFill="#f2eeee">
+                                       <font>
+                                          <Font name="Georgia" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="dashboard_availableMovies" layoutX="167.0" layoutY="15.0" prefHeight="32.0" prefWidth="58.0" text="1500" textFill="#f5eeee">
+                                       <font>
+                                          <Font name="Bookman Old Style Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="232.0" prefHeight="325.0" prefWidth="774.0" style="-fx-background-color: salmon; -fx-background-radius: 8;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="addMovies_form" layoutX="317.0" layoutY="173.0" prefHeight="571.0" prefWidth="801.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="12.0" layoutY="16.0" prefHeight="542.0" prefWidth="256.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 10;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane layoutX="55.0" layoutY="14.0" prefHeight="200.0" prefWidth="148.0" style="-fx-background-radius: 10; -fx-background-color: white;">
+                                 <children>
+                                    <ImageView fx:id="addMovies_imageView" fitHeight="200.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                              <Button fx:id="addMovies_import" layoutX="100.0" layoutY="228.0" mnemonicParsing="false" onAction="#importImage" style="-fx-background-radius: 9; -fx-background-color: #f9b2a1;" text="Import" textFill="#ff0606">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Label layoutX="9.0" layoutY="293.0" text="Movie Title:" textFill="#1e1616">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.15369151532649994" green="0.7631579041481018" blue="0.03179824724793434" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Label>
+                              <TextField fx:id="addMovies_movieTitle" layoutX="77.0" layoutY="288.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-radius: 10;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <Label layoutX="36.0" layoutY="336.0" text="Genre:" textFill="#0a0909">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.47005969285964966" green="0.8684210777282715" blue="0.044225145131349564" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Label>
+                              <TextField fx:id="addMovies_genre" layoutX="76.0" layoutY="331.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-radius: 10;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <Label layoutX="20.0" layoutY="378.0" text="Duration:" textFill="#1b1515">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.2330043911933899" green="0.7894737124443054" blue="0.047514621168375015" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Label>
+                              <TextField fx:id="addMovies_duration" layoutX="76.0" layoutY="373.0" prefHeight="25.0" prefWidth="172.0" style="-fx-background-radius: 10;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TextField>
+                              <Label layoutX="8.0" layoutY="421.0" text="Published Date: ">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow>
+                                       <color>
+                                          <Color red="0.07443957030773163" green="0.6184210777282715" blue="0.04580896720290184" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Label>
+                              <Button fx:id="addMovies_updateBtn" layoutX="47.0" layoutY="500.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" style="-fx-background-radius: 9; -fx-background-color: #3ddb68;" text="Update" textFill="#ff0606">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="addMovies_deleteBtn" layoutX="142.0" layoutY="454.0" mnemonicParsing="false" onAction="#deleteAddMovies" prefHeight="30.0" prefWidth="62.0" style="-fx-background-radius: 9; -fx-background-color: #d62727;" text="Delete" textFill="#e1dfdf">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="addMovies_clearBtn" layoutX="143.0" layoutY="499.0" mnemonicParsing="false" onAction="#clearAddMoviesList" prefHeight="30.0" prefWidth="61.0" style="-fx-background-radius: 9; -fx-background-color: #277ed6;" text="Clear" textFill="#0500a1">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="addMovies_insertBtn" layoutX="47.0" layoutY="454.0" mnemonicParsing="false" onAction="#insertAddMovies" prefHeight="30.0" prefWidth="60.0" style="-fx-background-radius: 9; -fx-background-color: #db8c3d;" text="Insert" textFill="#ff0606">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <DatePicker fx:id="addMovies_date" layoutX="100.0" layoutY="416.0" prefHeight="25.0" prefWidth="140.0" promptText="MM-DD-YYYY" style="-fx-background-radius: 10; -fx-border-radius: 10;">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </DatePicker>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="288.0" layoutY="16.0" prefHeight="542.0" prefWidth="500.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 10;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TableView fx:id="addMovies_tableView" layoutX="14.0" layoutY="71.0" onMouseClicked="#selectAddMoviesList" prefHeight="459.0" prefWidth="471.0">
+                                <columns>
+                                  <TableColumn fx:id="addMovies_col_movieTitle" prefWidth="154.0" style="-fx-background-color: #5fd60b; -fx-background-radius: 10;" text="Movie Title" />
+                                  <TableColumn fx:id="addMovies_col_genre" prefWidth="87.0" style="-fx-background-color: #5fd60b; -fx-background-radius: 10;" text="Genre" />
+                                    <TableColumn fx:id="addMovies_col_duration" prefWidth="99.0" style="-fx-background-color: #5fd60b; -fx-background-radius: 10;" text="Duration" />
+                                    <TableColumn fx:id="addMovies_col_date" prefWidth="130.0" style="-fx-background-color: #5fd60b; -fx-background-radius: 10;" text="Published Date" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="addMovies_search" layoutX="14.0" layoutY="25.0" prefHeight="25.0" prefWidth="232.0" promptText="Search" style="-fx-background-radius: 10; -fx-background-color: white;">
+                                 <font>
+                                    <Font name="Bookman Old Style Italic" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="22.0" fitWidth="18.0" layoutX="249.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/search.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="availableMovies_form" prefHeight="571.0" prefWidth="801.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="7.0" layoutY="9.0" prefHeight="200.0" prefWidth="787.0" style="-fx-background-color: #7ffc03; -fx-background-radius: 10;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane layoutX="2.0" prefHeight="200.0" prefWidth="232.0" style="-fx-background-color: #03e3fc; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;" AnchorPane.leftAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="6.0" layoutY="31.0" prefHeight="19.0" prefWidth="67.0" text="Movie Title:">
+                                       <font>
+                                          <Font name="Georgia" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="availableMovies_title" alignment="CENTER" layoutX="75.0" layoutY="30.0" prefHeight="20.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Movie Title">
+                                       <font>
+                                          <Font name="Georgia" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="29.0" layoutY="69.0" prefHeight="19.0" prefWidth="47.0" text="Genre:">
+                                       <font>
+                                          <Font name="Georgia" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="37.0" layoutY="107.0" prefHeight="19.0" prefWidth="39.0" text="Date:">
+                                       <font>
+                                          <Font name="Georgia" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="availableMovies_selectMovie" layoutX="76.0" layoutY="153.0" mnemonicParsing="false" onAction="#selectMovie" style="-fx-background-radius: 12; -fx-background-color: orange;" text="Select Movie" textFill="#260ec4">
+                                       <font>
+                                          <Font name="Times New Roman" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Button>
+                                    <Label fx:id="availableMovies_genre" alignment="CENTER" layoutX="75.0" layoutY="69.0" prefHeight="20.0" prefWidth="149.0" style="-fx-border-color: black; -fx-border-radius: 5;" text="Movie Title">
+                                       <font>
+                                          <Font name="Georgia" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="availableMovies_date" alignment="CENTER" layoutX="75.0" layoutY="107.0" prefHeight="20.0" prefWidth="149.0" style="-fx-border-radius: 5; -fx-border-color: black;" text="Movie Title">
+                                       <font>
+                                          <Font name="Georgia" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="availableMovies_tableView" layoutX="241.0" layoutY="6.0" onMouseClicked="#selectAvailableMovies" prefHeight="187.0" prefWidth="538.0" style="-fx-background-radius: 10; -fx-background-color: #6b6f8f; -fx-border-radius: 10; -fx-border-color: black;">
+                                <columns>
+                                  <TableColumn fx:id="availableMovies_col_movieTitle" prefWidth="249.0" style="-fx-background-color: #add44c; -fx-background-radius: 15;" text="Movie Title" />
+                                  <TableColumn fx:id="availableMovies_col_genre" prefWidth="150.0" style="-fx-background-color: #add44c; -fx-background-radius: 15;" text="Genre" />
+                                    <TableColumn fx:id="availableMovies_col_showingDate" prefWidth="138.0" style="-fx-background-color: #add44c; -fx-background-radius: 15;" text="Showing Date" />
+                                </columns>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="8.0" layoutY="228.0" prefHeight="337.0" prefWidth="786.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-background-color: #03fc52;">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane prefHeight="337.0" prefWidth="233.0" style="-fx-background-color: #edd900; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10;">
+                                 <children>
+                                    <AnchorPane layoutX="37.0" layoutY="21.0" prefHeight="200.0" prefWidth="160.0" style="-fx-background-radius: 10; -fx-background-color: white;">
+                                       <children>
+                                          <ImageView fx:id="availableMovies_imageView" fitHeight="200.0" fitWidth="161.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                                             <effect>
+                                                <DropShadow />
+                                             </effect>
+                                          </ImageView>
+                                       </children>
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="0.03947368264198303" green="0.02905701845884323" blue="0.02905701845884323" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </AnchorPane>
+                                    <Label fx:id="availableMovies_movieTitle" alignment="CENTER" layoutX="8.0" layoutY="237.0" prefHeight="25.0" prefWidth="218.0" text="Label">
+                                       <font>
+                                          <Font name="Rockwell Extra Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="103.0" layoutY="273.0" text="Title">
+                                       <font>
+                                          <Font name="Georgia" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="417.0" layoutY="16.0" text="Purchase Ticket">
+                                 <font>
+                                    <Font name="Times New Roman" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="644.0" layoutY="68.0" text="Price">
+                                 <font>
+                                    <Font name="Times New Roman" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="485.0" layoutY="68.0" text="Quantity">
+                                 <font>
+                                    <Font name="Times New Roman" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="274.0" layoutY="114.0" prefHeight="25.0" prefWidth="156.0" text="VIP Lounge (Front):">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="247.0" layoutY="162.0" prefHeight="25.0" prefWidth="181.0" text="Comfort Zone (Middle):">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="286.0" layoutY="212.0" prefHeight="25.0" prefWidth="142.0" text="Saver Seats (Last):">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="availableMovies_vip_quantity" layoutX="486.0" layoutY="114.0" onMouseClicked="#getSpinnerValue" prefHeight="25.0" prefWidth="76.0" style="-fx-border-color: green; -fx-border-radius: 6; -fx-background-radius: 6;" />
+                              <Spinner fx:id="availableMovies_comfort_quantity" layoutX="486.0" layoutY="162.0" onMouseClicked="#getSpinnerValue" prefHeight="25.0" prefWidth="76.0" style="-fx-border-color: green; -fx-background-radius: 6; -fx-border-radius: 6;" />
+                              <Spinner fx:id="availableMovies_saver_quantity" layoutX="486.0" layoutY="212.0" onMouseClicked="#getSpinnerValue" prefHeight="25.0" prefWidth="76.0" style="-fx-border-color: green; -fx-border-radius: 6; -fx-background-radius: 6;" />
+                              <Label fx:id="availableMovies_vip_price" layoutX="647.0" layoutY="118.0" text="00 Tk.">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableMovies_comfort_price" layoutX="647.0" layoutY="166.0" text="00 Tk.">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableMovies_saver_price" layoutX="647.0" layoutY="216.0" text="00 Tk.">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="550.0" layoutY="264.0" text="Total:">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="availableMovies_total" layoutX="647.0" layoutY="264.0" text="00 Tk.">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="availableMovies_buyBtn" layoutX="645.0" layoutY="298.0" mnemonicParsing="false" onAction="#buy" style="-fx-background-color: #b01a22;" text="Buy" textFill="#00ff0d">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="availableMovies_receiptBtn" layoutX="706.0" layoutY="298.0" mnemonicParsing="false" style="-fx-background-color: #a31893;" text="Receipt" textFill="#ffde03">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="availableMovies_clearBtn" layoutX="549.0" layoutY="298.0" mnemonicParsing="false" onAction="#clearPurchaseTicketInfo" style="-fx-background-color: #08d4b2;" text="Clear" textFill="#c507f5">
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <Label layoutX="237.0" layoutY="272.0" prefHeight="25.0" prefWidth="153.0" text="VIP Lounge (Front): 500 Tk.">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="237.0" layoutY="291.0" prefHeight="25.0" prefWidth="181.0" text="Comfort Zone (Middle): 400 Tk.">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="238.0" layoutY="309.0" prefHeight="25.0" prefWidth="142.0" text="Saver Seats (Last): 300 Tk.">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="54.0" layoutX="690.0" layoutY="250.0" startX="-100.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="editScreening_form" layoutX="190.0" layoutY="186.0" prefHeight="571.0" prefWidth="801.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="542.0" prefWidth="260.0" style="-fx-background-radius: 10; -fx-background-color: #d152ad;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane layoutX="44.0" layoutY="32.0" prefHeight="213.0" prefWidth="173.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                                 <children>
+                                    <ImageView fx:id="editScreening_imageView" fitHeight="213.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></ImageView>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </AnchorPane>
+                              <Label fx:id="editScreening_MovieTitle" alignment="CENTER" layoutX="7.0" layoutY="263.0" prefHeight="17.0" prefWidth="247.0" text="Label" textFill="#030302">
+                                 <font>
+                                    <Font name="Rockwell Extra Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="106.0" layoutY="283.0" prefHeight="17.0" prefWidth="48.0" text="Title" textFill="#030302">
+                                 <font>
+                                    <Font name="Times New Roman" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="45.0" layoutY="342.0" prefHeight="18.0" prefWidth="66.0" text="Current:" textFill="#030302">
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="editScreening_current" layoutX="117.0" layoutY="339.0" onAction="#comboBox" prefHeight="25.0" prefWidth="101.0" promptText="Choose" />
+                              <Button fx:id="editScreening_clearBtn" layoutX="154.0" layoutY="396.0" mnemonicParsing="false" onAction="#clearEditScreening" style="-fx-background-color: #ba1313;" text="Clear" textFill="#e1e0ff">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Book Antiqua" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="editScreening_updateBtn" layoutX="50.0" layoutY="396.0" mnemonicParsing="false" onAction="#updateEditScreening" style="-fx-background-color: #078f32;" text="Update" textFill="#e1e0ff">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Book Antiqua" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="301.0" layoutY="14.0" prefHeight="542.0" prefWidth="485.0" style="-fx-background-radius: 10; -fx-background-color: #31c476;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TextField fx:id="editScreening_search" layoutX="132.0" layoutY="14.0" prefHeight="25.0" prefWidth="221.0" promptText="Search" style="-fx-background-radius: 9;">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="353.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/search.png" />
+                                 </image>
+                              </ImageView>
+                              <TableView fx:id="addScreening_tableView" layoutX="17.0" layoutY="56.0" onMouseClicked="#selectEditScreening" prefHeight="462.0" prefWidth="449.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-background-color: #d4794c;">
+                                <columns>
+                                  <TableColumn fx:id="editScreening_col_movieTitle" prefWidth="159.0" style="-fx-background-color: #d4cd4c; -fx-background-radius: 12;" text="Movie Title" />
+                                  <TableColumn fx:id="editScreening_col_genre" prefWidth="88.0" style="-fx-background-color: #d4cd4c; -fx-background-radius: 12;" text="Genre" />
+                                    <TableColumn fx:id="editScreening_col_duration" prefWidth="89.0" style="-fx-background-color: #d4cd4c; -fx-background-radius: 12;" text="Duration" />
+                                    <TableColumn fx:id="editScreening_col_current" prefWidth="112.0" style="-fx-background-color: #d4cd4c; -fx-background-radius: 12;" text="Current" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="customers_form" layoutX="232.0" layoutY="115.0" prefHeight="571.0" prefWidth="801.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="12.0" layoutY="14.0" prefHeight="546.0" prefWidth="265.0" style="-fx-background-radius: 10; -fx-background-color: #d152ad;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane layoutX="11.0" layoutY="9.0" prefHeight="248.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10;">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="34.0" text="Ticket #" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="customers_ticket" alignment="CENTER" layoutX="81.0" layoutY="34.0" prefHeight="15.0" prefWidth="146.0" style="-fx-border-color: green; -fx-border-radius: 6;" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="8.0" layoutY="76.0" text="Movie Title" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="customers_movieTitle" alignment="CENTER" layoutX="81.0" layoutY="76.0" prefHeight="15.0" prefWidth="146.0" style="-fx-border-color: green; -fx-border-radius: 6;" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="16.0" layoutY="116.0" text="Total Payment" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="customers_totalPayment" alignment="CENTER" layoutX="111.0" layoutY="116.0" prefHeight="17.0" prefWidth="115.0" style="-fx-border-color: green; -fx-border-radius: 6;" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="19.0" layoutY="156.0" text="Bought Date" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="customers_boughtDate" alignment="CENTER" layoutX="100.0" layoutY="156.0" prefHeight="17.0" prefWidth="127.0" style="-fx-border-color: green; -fx-border-radius: 6;" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="198.0" prefHeight="15.0" prefWidth="78.0" text="Bought Time" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="customers_boughtTime" alignment="CENTER" layoutX="96.0" layoutY="198.0" prefHeight="17.0" prefWidth="130.0" style="-fx-border-color: green; -fx-border-radius: 6;" textFill="#3f00ff">
+                                       <font>
+                                          <Font name="Times New Roman Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="customers_deleteBtn" layoutX="143.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="22.0" prefWidth="65.0" style="-fx-background-radius: 12; -fx-background-color: red; -fx-border-color: yellow; -fx-border-radius: 12;" text="Delete" textFill="#e7ff05">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="customers_clearBtn" layoutX="43.0" layoutY="301.0" mnemonicParsing="false" onAction="#clearCustomer" prefHeight="22.0" prefWidth="65.0" style="-fx-background-radius: 12; -fx-background-color: blue; -fx-border-color: yellow; -fx-border-radius: 12;" text="Clear" textFill="#05a4ff">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <font>
+                                    <Font name="Georgia" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="303.0" layoutY="14.0" prefHeight="546.0" prefWidth="485.0" style="-fx-background-radius: 10; -fx-background-color: #31c476;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TextField fx:id="customers_search" layoutX="132.0" layoutY="14.0" prefHeight="25.0" prefWidth="221.0" promptText="Search" style="-fx-background-radius: 9;">
+                                 <font>
+                                    <Font name="Times New Roman" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="353.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/search.png" />
+                                 </image>
+                              </ImageView>
+                              <TableView fx:id="customer_tableView" layoutX="17.0" layoutY="56.0" onMouseClicked="#selectCustmerList" prefHeight="481.0" prefWidth="449.0" style="-fx-background-color: #d6700b; -fx-border-radius: 14; -fx-background-radius: 14;">
+                                 <columns>
+                                    <TableColumn fx:id="customers_col_ticketNumber" prefWidth="93.0" style="-fx-background-color: #25a2db; -fx-background-radius: 10;" text="Ticket Number" />
+                                    <TableColumn fx:id="customers_col_movieTitle" prefWidth="101.0" style="-fx-background-color: #25a2db; -fx-background-radius: 10;" text="Movie Title" />
+                                    <TableColumn fx:id="customers_col_totalPayment" prefWidth="91.0" style="-fx-background-color: #25a2db; -fx-background-radius: 10;" text="Total Payment" />
+                                    <TableColumn fx:id="customers_col_boughtDate" prefWidth="85.0" style="-fx-background-color: #25a2db; -fx-background-radius: 10;" text="Bought Date" />
+                                    <TableColumn fx:id="customers_col_BoughtTime" prefWidth="78.0" style="-fx-background-color: #25a2db; -fx-background-radius: 10;" text="Bought Time" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

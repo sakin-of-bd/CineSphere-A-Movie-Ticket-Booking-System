@@ -33,6 +33,7 @@ for digital solutions in the entertainment industry.
 
 
 ##Images
+
 ###Welcome Page
 <img width="1102" height="617" alt="image" src="https://github.com/user-attachments/assets/0d2021d6-4c0a-41bc-9de2-a75d5b4c8d22" />
 
